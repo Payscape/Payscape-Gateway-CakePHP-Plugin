@@ -206,7 +206,7 @@ $incoming['amount'] = '100.00'; // may not exceed Authorized amount
 $result_array = $this->Payscape->Capture($incoming);
 
 ```
-### Example Capture Success Response
+### Example Response: Capture Success
 ```
 Array
 (
