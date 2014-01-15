@@ -1,9 +1,9 @@
 
-#Payscape Gateway CakePHP Plugin v3.0#
+#Payscape Gateway CakePHP Plugin#
 	  
-##Installation## 
-1. Place this Plugin in your app/Plugin directory. 
-2. Place Payscape/Config/payscape.php in your /app/Config folder
+##Installation 
+1. Place this Plugin in your *app/Plugin* directory. 
+2. Place Payscape/Config/payscape.php in your */app/Config* folder
 3.	Edit userid: replace with your User ID from your Payscape account 
 4. Edit userpass: replace with your Password from your Payscape account
 5. Load the Plugin in your Config/bootstrap file. 

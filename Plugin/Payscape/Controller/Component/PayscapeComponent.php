@@ -1,19 +1,23 @@
 <?php 
 class PayscapeComponent extends Component
+
+
 {
 	/*
 	 * Payscape Direct Post API CakePHP Plugin v3.0
 	 * 
-	 * Edit userid: replace with your User ID from your Payscape account
-	 * Edit userpass: replace with your Password from your Payscape account
-	 * 
 	 * Place this Plugin in your app/Plugin directory.
+	 * Edit Config/payscape.php:
+	 * userid = your Payscape username
+	 * userpass = your Payscape password
+	 * Move /Config/payscape.php to your /app/Config folder.
+	 * 
 	 * Load the Plugin in your Config/bootstrap file. 
 	 * 
 	 * CakePlugin::load('Payscape');
 	 * 
 	 * Include the Payscape Component in your Controller 
-	 * public $components = array('Paginator', 'Session', 'Payscape.Payscape');
+	 * public $components = array('Payscape.Payscape');
 	 * 
 	 *  /webroot/crt/cacert.pem is included so that you may use cURL. 
 	 * 
@@ -24,11 +28,7 @@ class PayscapeComponent extends Component
 	 * Two send() methods are included, one that uses Cake's HTTPSocket, as well as one that uses cURL.
 	 * To use the Cake HTTPSocket version, simply rename sendHTTPSocket() to send(), and the current send() to sendcURL(). 
 	 * 
-	 * 
-	 * Add 'Payscape' to your array of components in your Controller, or AppController 
-	 * to make the Class available for all of your Controllers
-	 * 
-	 * Payscape Direct Post API CakePHP Plugin exposes all of the methods of the Payscape NMI API
+	 * Payscape Gateway CakePHP Plugin exposes all of the methods of the Payscape NMI API
 	 * 
 	 * See Payscape Direct Post API Documentation for complete notes on variables:
 	 * 
@@ -37,24 +37,22 @@ class PayscapeComponent extends Component
 	 * 
 	 * See the Payscape CakePHP Developers Suite for examples of each of the methods.
 	 * 
-	 * 1/14/2014
+	 * 1/15/2014
 	 * 
 	 * */
 
 	const url 		= 'https://secure.payscapegateway.com/api/transact.php';
 
-	const userid 	= 'demo'; 					//Replace with your UserID from Payscape.com
-	const userpass	= 'password';				//Replace with your Password from Payscape.com
-
-	
-
 	/* send using the Cake HTTPSocket */	
 	protected function sendHTTPSocket($trans){
 		$query['ipaddress'] = $_SERVER["REMOTE_ADDR"];
-		$query['username'] = self::userid;
-		$query['password'] = self::userpass;
 		
+		Configure::load('payscape');
 		App::uses('HttpSocket', 'Network/Http');
+		
+		$trans['username'] = Configure::read('Payscape.userid');
+		$trans['password'] = Configure::read('Payscape.userpass');
+				
 		$HttpSocket = new HttpSocket();
 		return $HttpSocket->post(self::url, $trans);
 	}// sendHTTPSocket
@@ -62,9 +60,9 @@ class PayscapeComponent extends Component
 	/* send using cURL */
 	protected function sendCURL($trans){
 	
-		$trans['username'] = self::userid;
-		$trans['password'] = self::userpass;
-	
+		Configure::load('payscape');
+		$trans['username'] = Configure::read('Payscape.userid');
+		$trans['password'] = Configure::read('Payscape.userpass');
 	
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, self::url);
@@ -97,9 +95,9 @@ class PayscapeComponent extends Component
 	
 	protected function send($trans){
 		
-		$trans['username'] = self::userid;
-		$trans['password'] = self::userpass;
-		
+		Configure::load('payscape');
+		$trans['username'] = Configure::read('Payscape.userid');
+		$trans['password'] = Configure::read('Payscape.userpass');		
 	
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, self::url);
