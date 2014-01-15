@@ -94,7 +94,7 @@ $result_array = $this->Payscape->Sale($incoming);
     [customer_vault_id] => 
 )
 ```	  
-### Example Sale eCheck ACH transaction
+### <a name="check">Example Sale eCheck ACH transaction</a>
 ```
 $incoming = array();
 $incoming['amount'] = 'amount';
