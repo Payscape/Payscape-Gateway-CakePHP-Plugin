@@ -29,8 +29,9 @@ To use the Cake HTTPSocket version, simply rename sendHTTPSocket() to send(), an
 Payscape Gateway CakePHP Plugin exposes all of the methods of the Payscape NMI API
 	  
 See Payscape Direct Post API Documentation for complete notes on variables	  
-Direct Post API / Documentation / Transaction Variables
 http://payscape.com/developers/direct-post-api.php
+*Direct Post API / Documentation / Transaction Variables*
+
 	  
 See the Payscape CakePHP Developers Suite for examples of each of the methods.
 	  
