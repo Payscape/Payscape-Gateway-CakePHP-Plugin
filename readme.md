@@ -43,7 +43,7 @@ public $components = array('Payscape.Payscape');
 	  
 * See Payscape Direct Post API Documentation for complete notes on variables here http://payscape.com/developers/direct-post-api.php
 
-* See the Payscape Gateway CakePHP Developers Suite for examples of each of the methods.
+* See the Payscape Gateway CakePHP Developers Suite for working examples of each of the Payscape Gateway transactions.
 
 ## Documentation
 
@@ -249,6 +249,9 @@ $incoming['country'] = $transaction['transactions']['country'];
 $incoming['phone'] = $transaction['transactions']['phone'];
 $incoming['fax'] = $transaction['transactions']['fax'];
 $incoming['email'] = $transaction['transactions']['email'];
+
+$result_array = $this->Payscape->Credit($incoming);
+
 ```
 ### Example Response Credit Success
 ```
