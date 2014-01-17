@@ -312,7 +312,7 @@ class PayscapeComponent extends Component
 		}// count array
 	}// Credit
 	
-public function ValidateCreditCard($incoming=null){
+public function Validate($incoming=null){
 
 	$key = self::key;
 	$time = gmdate('YmdHis');
