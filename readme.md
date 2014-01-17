@@ -8,7 +8,7 @@ Payscape Gaetway CakePHP Plugin v3.0
 ## Installation
 * cd to *your_app_path/Plugin* directory 
 ```
-git submodule add https://github.com/Payscape/Payscape-Gateway-CakePHP-Plugin.git  Payscape 
+git clone https://github.com/Payscape/Payscape-Gateway-CakePHP-Plugin.git Payscape
 ```
 * Copy /crt/cacert.pem to your document root.
 	  
