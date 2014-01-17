@@ -3,47 +3,43 @@
 Rapid eCommerce web development with CakePHP and the Payscape Gateway
 
 ## Version
-Payscape Direct Post API CakePHP Plugin v3.0
+Payscape Gaetway CakePHP Plugin v3.0
+
+## Installation
+* cd to *your_app_path/Plugin* directory 
+```
+git submodule add https://github.com/Payscape/Payscape-Gateway-CakePHP-Plugin.git  Payscape 
+```
+* Copy /crt/cacert.pem to your document root.
 	  
 ## Set Up	  
-* Copy /webroot/crt to your document root.
-
-* Place this Plugin in your app/Plugin directory.
-
 * Edit Config/payscape.php:
 *userid* = your Payscape username
 *userpass* = your Payscape password
-
 * Move /Config/payscape.php to your /app/Config folder.
 	  
-* Load the Plugin in your Config/bootstrap file. 
+* Load the Payscape Plugin in your Config/bootstrap file. 
 ```	  
 CakePlugin::load('Payscape');
 ```	  
 
-* Include the Payscape Component in your Controller 
+* Include the Payscape Component in your Controller, or your AppController to make it available for multiple Contorllers. 
 ```
 public $components = array('Payscape.Payscape');
 ```	  
 
 ## cURL Notes
-* /webroot/crt/cacert.pem is included so that you may use cURL. 
-	  
+* /crt/cacert.pem is included so that you may use cURL to post to the Payscape Gateway   
 * You may use either cURL or Cake's HTTPSocket for your send() function.
 * Both are included here. 
 	  
 ## Features	  
 * Sale() detects if your transaction is Credit Card or eCheck and sends the correct params 
-
 * Two send() methods are included, one that uses Cake's HTTPSocket, as well as one that uses cURL.
-
-* To use the Cake HTTPSocket version, simply rename sendHTTPSocket() to send(), and the current send() to sendcURL(). 
-	  
-* Payscape Gateway CakePHP Plugin exposes all of the methods of the Payscape Gateway
-	  
+* To use the Cake HTTPSocket version, simply rename sendHTTPSocket() to send(), and the default send() method to sendcURL().  
+* Payscape Gateway CakePHP Plugin exposes all of the methods of the Payscape Gateway.	  
 * See Payscape Direct Post API Documentation for complete notes on variables here http://payscape.com/developers/direct-post-api.php
-
-* See the Payscape Gateway CakePHP Developers Suite for examples of each of the methods.
+* See the Payscape Gateway CakePHP Developers Suite here https://github.com/Payscape/Payscape-Gateway-CakePHP-Developers-Suite for working examples of each all of the available transaction methods.
 
 ## Documentation
 
@@ -268,7 +264,7 @@ Array
     [customer_vault_id] => 
 )
 ```
-### Example Validation transaction
+### Example Validate transaction
 ```
 $incoming = array();
 $incoming['type'] = 'validate';
@@ -290,7 +286,7 @@ $incoming['phone'] = $this->request->data['Transaction']['phone'];
 $incoming['fax'] = $this->request->data['Transaction']['fax'];
 $incoming['email'] = $this->request->data['Transaction']['email'];
 
-$result_array = $this->Payscape->ValidateCreditCard($incoming);
+$result_array = $this->Payscape->Validate($incoming);
 ```
 ### Example Response Validate Success
 ```
