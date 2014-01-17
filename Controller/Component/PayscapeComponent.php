@@ -42,6 +42,7 @@ class PayscapeComponent extends Component
 	 * */
 
 	const url 		= 'https://secure.payscapegateway.com/api/transact.php';
+	const key 		= '';
 
 	/* send using the Cake HTTPSocket */	
 	protected function sendHTTPSocket($trans){
