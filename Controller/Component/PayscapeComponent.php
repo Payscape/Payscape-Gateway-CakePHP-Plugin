@@ -137,7 +137,7 @@ class PayscapeComponent extends Component
 		
 		$order_id = (isset($incoming['order_id']) ? $incoming['order_id'] : '');
 		
-		$hash = md5($order_id|$amount|$time|self::key);
+	//	$hash = md5($order_id|$amount|$time|self::key);
 		$payment = (isset($incoming['payment']) ? $incoming['payment'] : '');
 		
 		if($payment=='check'){
@@ -217,7 +217,7 @@ class PayscapeComponent extends Component
 		
 		$order_id = (isset($incoming['order_id']) ? $incoming['order_id'] : '');
 		
-		$hash = md5($order_id|$amount|$time|self::key);
+	//	$hash = md5($order_id|$amount|$time|self::key);
 		$payment = 'creditcard';
 		
 			$required = array('ccnumber', 'ccexp', 'amount');
@@ -314,7 +314,6 @@ class PayscapeComponent extends Component
 	
 public function Validate($incoming=null){
 
-	$key = self::key;
 	$time = gmdate('YmdHis');
 	$type = 'validate';
 	
