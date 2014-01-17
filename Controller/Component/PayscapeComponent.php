@@ -10,7 +10,7 @@ class PayscapeComponent extends Component
 	 * Edit Config/payscape.php:
 	 * userid = your Payscape username
 	 * userpass = your Payscape password
-	 * Move /Config/payscape.php to your /app/Config folder.
+	 * Copy /Config/payscape.php to your /app/Config folder.
 	 * 
 	 * Load the Plugin in your Config/bootstrap file. 
 	 * 
