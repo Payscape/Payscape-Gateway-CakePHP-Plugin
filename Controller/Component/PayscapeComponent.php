@@ -193,7 +193,7 @@ class PayscapeComponent extends Component
 		
 		parse_str($response, $result_array);
 		
-		return $result_array();
+		return $result_array;
 
 
 			} else {
@@ -254,7 +254,7 @@ class PayscapeComponent extends Component
 		
 		parse_str($response, $result_array);
 		
-		return $result_array();
+		return $result_array;
 		
 			
 		
@@ -351,7 +351,7 @@ public function Validate($incoming=null){
 		
 		parse_str($response, $result_array);
 		
-		return $result_array();
+		return $result_array;
 
 	} else {
 		$response['Message'] = 'Required Values Are Missing';
@@ -377,7 +377,7 @@ public function Validate($incoming=null){
 					
 					parse_str($response, $result_array);
 					
-					return $result_array();
+					return $result_array;
 		
 			} else {
 				$response['Message'] = 'Required Values <strong>type or transactionid</strong> Are Missing';
@@ -401,7 +401,7 @@ public function Validate($incoming=null){
 				
 				parse_str($response, $result_array);
 				
-				return $result_array();
+				return $result_array;
 		
 		} else {
 			$response['Message'] = $response['Message'] = 'Required Values <strong>type or transactionid</strong> Are Missing';
@@ -433,7 +433,7 @@ public function Validate($incoming=null){
 				
 				parse_str($response, $result_array);
 				
-				return $result_array();
+				return $result_array;
 		
 		} else {
 			$response['Message'] = 'Required Values <strong>type or transactionid</strong> Are Missing';
@@ -464,7 +464,7 @@ public function Validate($incoming=null){
 				
 				parse_str($response, $result_array);
 				
-				return $result_array();
+				return $result_array;
 			
 		} else {
 			$response['Message'] = 'Required Values <strong>type or transactionid</strong> Are Missing';
