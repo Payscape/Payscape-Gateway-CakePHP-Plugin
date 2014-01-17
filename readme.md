@@ -16,7 +16,7 @@ git clone https://github.com/Payscape/Payscape-Gateway-CakePHP-Plugin.git Paysca
 * Edit Config/payscape.php:
 *userid* = your Payscape username
 *userpass* = your Payscape password
-* Move /Config/payscape.php to your /app/Config folder.
+* Copy /Config/payscape.php to your /app/Config folder.
 	  
 * Load the Payscape Plugin in your Config/bootstrap file. 
 ```	  
