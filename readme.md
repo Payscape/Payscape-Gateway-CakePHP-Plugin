@@ -4,6 +4,13 @@
 * The Payscape Gateway CakePHP Plugin exposes all of the transaction methods of the Payscape Gateway.
 * Database schema included in /schema/transactions.sql to create the table that saves transactions and their details.
 
+## Requirements
+* PHP 5.2.8 or greater
+* Database server in one of these flavors 
+*mySQL 4.2 or greater, PostgreSQL, Microsoft SQL Server or SQLite*
+* cURL - if you wish to use cURL posts, or you may opt to use the native Cake HTTPSocket for your posts.
+* CakePHP 2+
+
 ## Version
 Payscape Gateway CakePHP Plugin v3.0
 Tested with CakePHP 2.4.3
