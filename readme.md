@@ -1,15 +1,27 @@
 
 #Payscape Gateway CakePHP Plugin
-Rapid eCommerce web development with CakePHP and the Payscape Gateway
+* Rapid eCommerce web development with CakePHP and the Payscape Gateway
+* The Payscape Gateway CakePHP Plugin exposes all of the transaction methods of the Payscape Gateway.
+* Database schema included in /schema/transactions.sql to create the table that saves transactions and their details.
 
 ## Version
-Payscape Gaetway CakePHP Plugin v3.0
+Payscape Gateway CakePHP Plugin v3.0
+Tested with CakePHP 2.4.3
 
-## Installation
+## Installation 
+### Clone With GIT
 * cd to *your_app_path/Plugin* directory 
 ```
 git clone https://github.com/Payscape/Payscape-Gateway-CakePHP-Plugin.git Payscape
 ```
+
+### Download the ZIP File
+* Download the ZIP file to your machine from here: https://github.com/Payscape/Payscape-Gateway-CakePHP-Plugin/archive/master.zip
+* Unzip the archive and copy it to your local development server.
+* Create the folder /Payscape in your */app/Plugin* directory.
+* Copy the unzipped archive to your */app/Plugin/Payscape* directory.
+
+### Install cacert.pem for cURL
 * Copy /crt/cacert.pem to your document root.
 	  
 ## Set Up	  
@@ -391,5 +403,5 @@ Array
 )
 ```
 
-#### Last updated: 1/15/2014
+*1/20/2014*
 	  
