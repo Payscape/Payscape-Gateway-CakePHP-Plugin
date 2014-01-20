@@ -1,6 +1,7 @@
 
 #Payscape Gateway CakePHP Plugin
-* Add this plugin to your existing CakePHP application.
+If you already have an existing website that is running CakePHP and you want to connect to the Payscape Gateway and save time, you can use this CakePHP plugin. 
+
 * Rapid eCommerce web development with CakePHP and the Payscape Gateway
 * The Payscape Gateway CakePHP Plugin exposes all of the transaction methods of the Payscape Gateway.
 * Database schema included in /schema/transactions.sql to create the table that saves transactions and their details.
