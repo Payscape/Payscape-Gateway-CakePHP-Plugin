@@ -305,7 +305,11 @@ class PayscapeComponent extends Component
 			$transactiondata['email'] = (isset($incoming['email']) ? $incoming['email'] : '');
 			$transactiondata['ipaddress'] = $_SERVER["REMOTE_ADDR"];
 		
-			return self::send($transactiondata);
+			$response = self::send($transactiondata);
+			parse_str($response, $result_array);
+			return $result_array;
+			
+			
 		} else {		
 			$response['Message'] = 'Required Values Are Missing';
 			$response['error'] = 1;
