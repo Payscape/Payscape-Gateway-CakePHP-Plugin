@@ -248,9 +248,9 @@ $time = gmdate('YmdHis');
 
 $incoming = array();
 $incoming['type'] = 'credit;
-$incoming['transactionid'] = 'sale transaction id';
+$incoming['transactionid'] = 'sale transactionid';
 $incoming['amount'] = 'sale amount';
-$incoming['orderid'] = 'sale transactionid';
+$incoming['orderid'] = 'sale orderid';
 		
 $incoming['time'] = $time;	
 	
@@ -359,7 +359,7 @@ Array
 ```
 incoming = array();
 $incoming['type'] = 'refund;
-$incoming['transactionid'] = 'sale transaction id';
+$incoming['transactionid'] = 'sale transactionid';
 $incoming['shipping_carrier'] = 'shipping_carrier';
 $incoming['tracking_number'] = 'shipping carrier tracking_number';
 		
