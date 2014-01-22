@@ -273,12 +273,12 @@ Array
 (
     [response] => 1
     [responsetext] => SUCCESS
-    [authcode] => 123456
+    [authcode] => 
     [transactionid] => 2114517479
     [avsresponse] => N
     [cvvresponse] => N
     [orderid] => 20140103113440Test
-    [type] => sale
+    [type] => credit
     [response_code] => 100
     [merchant_defined_field_6] => 
     [merchant_defined_field_7] => 
