@@ -388,7 +388,7 @@ Array
 ```
 $incoming = array();
 $incoming['type'] = $'void';
-$incoming['transactionid'] = 'sale transaction id';
+$incoming['transactionid'] = '2136214021'; // sale transactionid
 $incoming['amount'] = 'sale amount';
 
 $result_array = $this->Payscape->Void($incoming);
@@ -400,7 +400,7 @@ Array
     [response] => 1
     [responsetext] => Transaction Void Successful
     [authcode] => 123456
-    [transactionid] => 2110075690
+    [transactionid] => 2136214021
     [avsresponse] => 
     [cvvresponse] => 
     [orderid] => 20131230143602Test
