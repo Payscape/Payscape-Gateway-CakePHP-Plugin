@@ -5,6 +5,10 @@ If you already have an existing website that is running CakePHP and you want to 
 * Rapid eCommerce web development with CakePHP and the Payscape Gateway
 * The Payscape Gateway CakePHP Plugin exposes all of the transaction methods of the Payscape Gateway.
 * Database schema included in /schema/transactions.sql to create the table that saves transactions and their details.
+## Author
+* github@payscape.com
+## Contact
+* github@payscape.com
 
 ## Requirements
 * PHP 5.2.8 or greater
