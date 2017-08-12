@@ -1,5 +1,5 @@
 
-#Payscape Gateway CakePHP Plugin
+# Payscape Gateway CakePHP Plugin
 If you already have an existing website that is running CakePHP and you want to connect to the Payscape Gateway and save time, you can use this CakePHP plugin. 
 
 * Rapid eCommerce web development with CakePHP and the Payscape Gateway
